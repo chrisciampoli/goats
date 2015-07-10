@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "Running browserify"
+./node_modules/.bin/browserify -t babelify --extension=.js $1 -o $2
