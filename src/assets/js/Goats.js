@@ -4,7 +4,6 @@ import Repository from './utils/Repository';
 import Container from './utils/Container';
 
 // Modules
-import TestModule from './modules/TestModule';
 import InstagramModule from './modules/InstagramModule';
 
 class Goats {
@@ -21,7 +20,6 @@ class Goats {
 
   buildModules() {
     var repository = new Repository();
-    repository.add('testModule', TestModule);
     repository.add('instagramModule', InstagramModule);
 
     return repository;

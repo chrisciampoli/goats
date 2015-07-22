@@ -2,16 +2,16 @@ import { Component } from 'react-class-helper';
 
 const React = require('react');
 
-class TestComponent extends Component {
+class ImageComponent extends Component {
     constructor(props) {
         super(props);
     }
 
     render() {
       return (
-        <p>Here!</p>
+        <img src="#" />
       );
     }
 }
 
-module.exports = TestComponent;
+module.exports = ImageComponent;
