@@ -5,6 +5,7 @@ import Container from './utils/Container';
 
 // Modules
 import TestModule from './modules/TestModule';
+import InstagramModule from './modules/InstagramModule';
 
 class Goats {
   constructor() {
@@ -21,6 +22,7 @@ class Goats {
   buildModules() {
     var repository = new Repository();
     repository.add('testModule', TestModule);
+    repository.add('instagramModule', InstagramModule);
 
     return repository;
   }
