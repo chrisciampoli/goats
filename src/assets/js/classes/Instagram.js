@@ -4,12 +4,14 @@ class Instagram {
 
   constructor() {
     this.stateData = {
-      feed: []
+      feed: [],
+      images: []
     };
   }
 
   init(data) {
-    this.setFeed(data);
+    this.setFeed(data.data);
+    this.setImages(data.images);
   }
 
   setFeed(data) {
@@ -19,6 +21,15 @@ class Instagram {
   getFeed() {
     return this.stateData.feed;
   }
+
+  setImages(images) {
+    this.stateData.images = images;
+  }
+
+  getImages() {
+    return this.stateData.images;
+  }
+
 }
 
 module.exports = Instagram;
