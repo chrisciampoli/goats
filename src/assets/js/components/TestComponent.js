@@ -5,7 +5,6 @@ const React = require('react');
 class TestComponent extends Component {
     constructor(props) {
         super(props);
-
     }
 
     render() {

@@ -1,6 +1,7 @@
 const React = require("react");
 // Support Classes
-import Repository from './Classes';
+import Repository from './utils/Repository';
+import Container from './utils/Container';
 
 // Modules
 import TestModule from './modules/TestModule';
@@ -12,6 +13,8 @@ class Goats {
 
   run() {
     this.modules = this.buildModules();
+    this.container = new Container(this);
+
     console.log('Goats is load mmmmmmmm!');
   }
 
