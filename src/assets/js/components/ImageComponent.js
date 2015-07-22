@@ -11,10 +11,14 @@ class ImageComponent extends Component {
 
     }
 
+    removeImage(event) {
+      this.props.di('instagram').removeImage(event.target.src);
+    }
+
     render() {
       var images = this.props.images.map((image, index) => {
         return (
-          <img key={index} src={image.url} />
+          <img onClick={this.removeImage} key={index} src={image.url} />
         );
       });
       return (

@@ -4,10 +4,10 @@ import InstagramController from '../controllers/InstagramController';
 module.exports = () => {
   var data = goats.container.get('instagramAPI').fetch();
   var Instagram = goats.container.get('instagram');
-  Instagram.init(data);
+  Instagram.init(data, InstagramController);
 
   React.render(
-        <InstagramController images={Instagram.getImages()} />, 
+        <InstagramController images={Instagram.getImages()} />,
         document.getElementById('pageLoader')
     );
 
