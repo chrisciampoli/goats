@@ -12,6 +12,10 @@ class InstagramController extends Component {
         }
     }
 
+    componentDidMount() {
+      this.props.di('instagram').setController(this);
+    }
+
     render() {
       return (
         <ImageComponent images={this.state.images} />

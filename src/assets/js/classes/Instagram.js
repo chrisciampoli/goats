@@ -10,11 +10,9 @@ class Instagram {
     };
   }
 
-  init(data, controller) {
+  init(data) {
     this.setFeed(data.data);
     this.setImages(data.images);
-    console.log(controller);
-    this.setController(controller);
   }
 
   setController(controller) {
@@ -35,8 +33,6 @@ class Instagram {
 
   setImages(images) {
     this.stateData.images = images;
-    var controller = this.getController();
-    console.log(controller.state);
   }
 
   getImages() {
@@ -54,6 +50,8 @@ class Instagram {
           }
         }
         this.setImages(images);
+        var controller = this.getController();
+        controller.setState({images: images});
       } catch (e) {
         // fail silent
       }
